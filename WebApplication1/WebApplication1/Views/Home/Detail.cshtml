@@ -1,0 +1,47 @@
+﻿@model WebApplication1.Models.Album
+@{ 
+    ViewBag.Title = "Detail";
+    Layout = "/Views/Shared/Layout.cshtml";
+}
+
+
+
+<div>
+    <div>
+        <h4>Album</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                <label>Genre</label>
+
+            </dt>
+
+            <dd>
+                <span>@Model.Genre</span>
+
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+</div>
